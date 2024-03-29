@@ -42,22 +42,22 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void print(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, unsigned int line_number);
-void free_stack(stack_t *head);
-void print_top(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
-void _div(stack_t **stack, unsigned int line_number);
-void _mul(stack_t **stack, unsigned int line_number);
-void mod(stack_t **stack, unsigned int line_number);
-void pchara(stack_t **stack, unsigned int line_number);
-void pstr(stack_t **stack, unsigned int line_number);
-void rotl(stack_t **stack, unsigned int line_number);
-void rotr(stack_t **stack, unsigned int line_number);
-int _strlen_nodes(stack_t *head);
-int check_cmd(char *buffer, unsigned int line, stack_t **head);
+void aprint(stack_t **stack, unsigned int line_number);
+void apush(stack_t **stack, unsigned int line_number);
+void afree_stack(stack_t *head);
+void aprint_top(stack_t **stack, unsigned int line_number);
+void apop(stack_t **stack, unsigned int line_number);
+void aswap(stack_t **stack, unsigned int line_number);
+void aadd(stack_t **stack, unsigned int line_number);
+void asub(stack_t **stack, unsigned int line_number);
+void a_div(stack_t **stack, unsigned int line_number);
+void a_mul(stack_t **stack, unsigned int line_number);
+void amod(stack_t **stack, unsigned int line_number);
+void apchara(stack_t **stack, unsigned int line_number);
+void apstr(stack_t **stack, unsigned int line_number);
+void arotl(stack_t **stack, unsigned int line_number);
+void arotr(stack_t **stack, unsigned int line_number);
+int a_strlen_nodes(stack_t *head);
+int acheck_cmd(char *buffer, unsigned int line, stack_t **head);
 
 #endif
