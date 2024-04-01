@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * action - handles the opcode
- * @content: line content
- * @stack: head linked list
- * @line_counter: line counter
- * @file: pointer to monty file
- * Return: 0 on success, 1 if opcode is unknown
+ * aaction - handles the opcode.
+ * @content: line content.
+ * @stack: head linked list.
+ * @line_counter: line counter.
+ * @file: pointer to monty file.
+ * Return: 0 on success, 1 if opcode is unknown.
  */
-int action(char *content, stack_t **stack, unsigned int line_counter,
+int aaction(char *content, stack_t **stack, unsigned int line_counter,
 FILE *file)
 {
 	instruction_t command_list[] = {
@@ -20,25 +20,25 @@ FILE *file)
 		{"sub", subtract_top_2}, {"div", divider}, {"mul", multiplier},
 		{NULL, NULL}
 	};
-	unsigned int i = 0;
-	char *data;
+	unsigned int a = 0;
+	char *dataa;
 
-	data = strtok(content, " \n\t");
-	if (data && data[0] == '#')
+	dataa = strtok(content, " \n\t");
+	if (dataa && dataa[0] == '#')
 		return (0);
 	pusher.arg = strtok(NULL, " \n\t");
-	while (command_list[i].opcode && data)
+	while (command_list[a].opcode && dataa)
 	{
-		if (strcmp(data, command_list[i].opcode) == 0)
+		if (strcmp(data, command_list[a].opcode) == 0)
 		{
-			command_list[i].f(stack, line_counter);
+			command_list[a].f(stack, line_counter);
 			return (0);
 		}
-		i++;
+		a++;
 	}
-	if (data && command_list[i].opcode == NULL)
+	if (dataa && command_list[a].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", line_counter, data);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_counter, dataa);
 		fclose(file);
 		free(content);
 		free_sll(*stack);
