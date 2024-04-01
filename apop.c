@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * popper - removes top element of stack.
+ * apopper - removes top element of stack.
  * @head: stack head.
  * @line_counter: line number.
  *
