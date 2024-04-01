@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * node_creator - add node to head stack.
+ * anode_creator - add node to head stack.
  * @head: head of stack.
  * @n: new_value.
  *
