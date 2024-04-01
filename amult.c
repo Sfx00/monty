@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * multiplier - multiplies top two elements of the stack.
+ * amultiplier - multiplies top two elements of the stack.
  * @head: stack head.
  * @line_counter: line_number.
  *
