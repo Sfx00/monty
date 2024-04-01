@@ -9,13 +9,13 @@
 #include <ctype.h>
 
 /**
- * struct stack_s - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prev: points to the previous element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
+ * struct stack_s - doubly linked list representation of a stack (or queue).
+ * @n: integer.
+ * @prev: points to the previous element of the stack (or queue).
+ * @next: points to the next element of the stack (or queue).
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO Holberton project.
  */
 typedef struct stack_s
 {
@@ -26,12 +26,12 @@ typedef struct stack_s
 
 
 /**
- * struct payload - variables -args, file, line content
- * @arg: value
- * @file: pointer to monty file
- * @content: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
+ * struct payload - variables -args, file, line content.
+ * @arg: value.
+ * @file: pointer to monty file.
+ * @content: line content.
+ * @lifi: flag change stack <-> queue.
+ * Description: carries values through the program.
  */
 typedef struct payload
 {
@@ -43,12 +43,12 @@ typedef struct payload
 extern pay_data pusher;
 
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct instruction_s - opcode and its function.
+ * @opcode: the opcode.
+ * @f: function to handle the opcode.
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO Holberton project.
  */
 typedef struct instruction_s
 {
@@ -56,27 +56,28 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-void push(stack_t **head, unsigned int number);
+ssize_t agetline(char **lineptr, size_t *n, FILE *stream);
+void apush(stack_t **head, unsigned int number);
 
-void pinter(stack_t **head, unsigned int number);
-int action(char *content, stack_t **head, unsigned int counter, FILE *file);
-void free_sll(stack_t *head);
-void popper(stack_t **head, unsigned int counter);
-void swapper(stack_t **head, unsigned int counter);
-void add_top_2(stack_t **head, unsigned int counter);
-void nope(stack_t **head, unsigned int counter);
-void subtract_top_2(stack_t **head, unsigned int counter);
-void divider(stack_t **head, unsigned int counter);
-void multiplier(stack_t **head, unsigned int counter);
-void modulator(stack_t **head, unsigned int counter);
-void print_char(stack_t **head, unsigned int counter);
-void print_str(stack_t **head, unsigned int counter);
-void rotater(stack_t **head, unsigned int counter);
-void s_rotator(stack_t **head, __attribute__((unused)) unsigned int counter);
-void node_creator(stack_t **head, int n);
-void queue_creator(stack_t **head, int n);
-void queues(stack_t **head, unsigned int counter);
-void stack_printer(stack_t **head, unsigned int counter);
-void stack_p(stack_t **head, unsigned int line_counter);
+void astack_p(stack_t **head, unsigned int line_counter);
+void apinter(stack_t **head, unsigned int number);
+int aaction(char *content, stack_t **head, unsigned int counter, FILE *file);
+void afree_sll(stack_t *head);
+void apopper(stack_t **head, unsigned int counter);
+void aswapper(stack_t **head, unsigned int counter);
+void aadd_top_2(stack_t **head, unsigned int counter);
+void anope(stack_t **head, unsigned int counter);
+void asubtract_top_2(stack_t **head, unsigned int counter);
+void adivider(stack_t **head, unsigned int counter);
+void amultiplier(stack_t **head, unsigned int counter);
+void amodulator(stack_t **head, unsigned int counter);
+void aprint_char(stack_t **head, unsigned int counter);
+void aprint_str(stack_t **head, unsigned int counter);
+void arotater(stack_t **head, unsigned int counter);
+void as_rotator(stack_t **head, __attribute__((unused)) unsigned int counter);
+void anode_creator(stack_t **head, int n);
+void aqueue_creator(stack_t **head, int n);
+void aqueues(stack_t **head, unsigned int counter);
+void astack_printer(stack_t **head, unsigned int counter);
+
 #endif
