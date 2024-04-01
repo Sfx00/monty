@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * print_char - prints char at the top of stack,
+ * aprint_char - prints char at the top of stack,
  * followed by a new line.
  * @head: stack head.
  * @line_counter: line_number.
  *
 */
-void print_char(stack_t **head, unsigned int line_counter)
+void aprint_char(stack_t **head, unsigned int line_counter)
 {
 	stack_t *a;
 
