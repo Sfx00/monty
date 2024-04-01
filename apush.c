@@ -1,26 +1,26 @@
 #include "monty.h"
 
 /**
- * push - add node to the stack
- * @head: stack head
- * @line_counter: line_number
+ * push - add node to stack.
+ * @head: stack head.
+ * @line_counter: line_number.
  *
- * Return: nothing to return
+ * Return: nothing to return.
  */
-void push(stack_t **head, unsigned int line_counter)
+void apush(stack_t **head, unsigned int line_counter)
 {
-	int n, j = 0, flag = 0;
+	int m, a = 0, flage = 0;
 
 	if (pusher.arg)
 	{
 		if (pusher.arg[0] == '-')
-			j++;
-		for (; pusher.arg[j] != '\0'; j++)
+			a++;
+		for (; pusher.arg[a] != '\0'; a++)
 		{
-			if (pusher.arg[j] > 57 || pusher.arg[j] < 48)
-				flag = 1;
+			if (pusher.arg[a] > 57 || pusher.arg[a] < 48)
+				flage = 1;
 		}
-		if (flag == 1)
+		if (flage == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 			fclose(pusher.file);
@@ -38,9 +38,9 @@ void push(stack_t **head, unsigned int line_counter)
 		exit(EXIT_FAILURE);
 	}
 
-	n = atoi(pusher.arg);
+	m = atoi(pusher.arg);
 	if (pusher.lifi == 0)
-		node_creator(head, n);
+		node_creator(head, m);
 	else
-		queue_creator(head, n);
+		queue_creator(head, m);
 }
