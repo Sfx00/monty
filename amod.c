@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * modulator - computes rest of the division of second.
+ * amodulator - computes rest of the division of second.
  * top element of stack by the top element of the stack
  * @head: pointer to stack head.
  * @line_counter: line_number.
