@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * pinter - prints the value at the top of the stack.
- * @head: pointer to stack head
- * @line_counter: line_number
+ * pinter - prints value at top of the stack.
+ * @head: pointer to stack head.
+ * @line_counter: line_number.
  *
 */
-void pinter(stack_t **head, unsigned int line_counter)
+void apinter(stack_t **head, unsigned int line_counter)
 {
 	if (*head == NULL)
 	{
@@ -15,5 +15,6 @@ void pinter(stack_t **head, unsigned int line_counter)
 		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
+	
 	printf("%d\n", (*head)->n);
 }
