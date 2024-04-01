@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pinter - prints value at top of the stack.
+ * apinter - prints value at top of the stack.
  * @head: pointer to stack head.
  * @line_counter: line_number.
  *
