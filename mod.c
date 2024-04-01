@@ -1,23 +1,23 @@
 #include "monty.h"
 /**
- * modulator - computes the rest of the division of the second
- * top element of the stack by the top element of the stack
- * @head: pointer to the stack head
- * @line_counter: line_number
+ * modulator - computes rest of the division of second.
+ * top element of stack by the top element of the stack
+ * @head: pointer to stack head.
+ * @line_counter: line_number.
  *
 */
-void modulator(stack_t **head, unsigned int line_counter)
+void amodulator(stack_t **head, unsigned int line_counter)
 {
-	stack_t *h;
-	int len = 0, temp_head;
+	stack_t *a;
+	int lent = 0, temp_heade;
 
-	h = *head;
-	while (h)
+	a = *head;
+	while (a)
 	{
-		h = h->next;
-		len++;
+		a = a->next;
+		lent++;
 	}
-	if (len < 2)
+	if (lent < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", line_counter);
 		fclose(pusher.file);
@@ -25,8 +25,8 @@ void modulator(stack_t **head, unsigned int line_counter)
 		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	if (h->n == 0)
+	a = *head;
+	if (a->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_counter);
 		fclose(pusher.file);
@@ -34,8 +34,8 @@ void modulator(stack_t **head, unsigned int line_counter)
 		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
-	temp_head = h->next->n % h->n;
-	h->next->n = temp_head;
-	*head = h->next;
-	free(h);
+	temp_heade = a->next->n % a->n;
+	a->next->n = temp_heade;
+	*head = a->next;
+	free(a);
 }
